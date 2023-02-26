@@ -11,7 +11,7 @@ import common.*;
 public class Servidor {
 	public static void main (String[] args){
 		
-		String URLDBRegistry = "rmi://localhost:1/basededatos";
+		String URLDBRegistry = "rmi://192.168.1.134:1/basededatos";
 		ServicioDatosInterface h;
 		try {
 			h = (ServicioDatosInterface)Naming.lookup(URLDBRegistry);
@@ -21,12 +21,12 @@ public class Servidor {
 			Util.StartRegistry (1);
 			ServicioAutenticacionImpl exportedobject1 = new ServicioAutenticacionImpl(h);
 			ServicioGestorImpl exportedobject2 = new ServicioGestorImpl(h);
-			URLGestorRegistry = "rmi://localhost:"+ "1" + "/servidor/gestor";
-			URLAutenticadorRegistry = "rmi://localhost:"+ "1" + "/servidor/autenticador";
+			URLGestorRegistry = "rmi://192.168.1.134:"+ "1" + "/servidor/gestor";
+			URLAutenticadorRegistry = "rmi://192.168.1.134:"+ "1" + "/servidor/autenticador";
 			Naming.rebind(URLGestorRegistry, exportedobject2);
 			Naming.rebind(URLAutenticadorRegistry, exportedobject1);
 			System.out.println ("Servidor registrado.");
-			Util.RegistryList("rmi://localhost:"+ "1" + "/servidor");
+			Util.RegistryList("rmi://192.168.1.134:"+ "1" + "/servidor");
 			System.out.println("Servidor preparado.");
 			
 			
@@ -43,7 +43,7 @@ public class Servidor {
 				switch (option) {
 					case 1:
 						System.out.println("Informacion del servidor.");
-						Util.RegistryList("rmi://localhost:"+ "1" + "/servidor");
+						Util.RegistryList("rmi://192.168.1.134:"+ "1" + "/servidor");
 						break;
 					case 2:
 						System.out.println("Listar usuarios registrados.");

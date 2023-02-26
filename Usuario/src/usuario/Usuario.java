@@ -9,8 +9,8 @@ import common.*;
 
 public class Usuario {
 	public static void main (String args[]) {
-		String URLRegistryi = "rmi://localhost:1/servidor/gestor";
-		String URLRegistryj = "rmi://localhost:1/servidor/autenticador";
+		String URLRegistryi = "rmi://192.168.1.134:1/servidor/gestor";
+		String URLRegistryj = "rmi://192.168.1.134:1/servidor/autenticador";
 		
 		try {
 			
@@ -66,7 +66,7 @@ public class Usuario {
 								switch (optionb) {
 								case 1:
 									System.out.println("Informacion del Usuario.");
-									Util.RegistryList("rmi://localhost:"+ "3" + "/callback/");
+									Util.RegistryList("rmi://localhost:"+ "1" + "/callback/");
 									break;
 								case 2:
 									System.out.println("Enviar trino.");

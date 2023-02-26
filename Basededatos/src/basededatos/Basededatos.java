@@ -10,7 +10,7 @@ public class Basededatos {
 		try {
 			Util.StartRegistry(1);
 			ServicioDatosImpl exportedobject = new ServicioDatosImpl();
-			URLRegistry = "rmi://localhost:"+ "1" + "/basededatos";
+			URLRegistry = "rmi://192.168.1.134:"+ "1" + "/basededatos";
 			Naming.rebind(URLRegistry, exportedobject);
 			System.out.println ("Servidor registrado.");
 			Util.RegistryList(URLRegistry);

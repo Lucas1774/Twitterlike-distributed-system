@@ -9,4 +9,5 @@ The app is of course locally executed, so not applicable to the real world as is
 ## Usage
 
 Run the database and the server. Then you can run the client applications. Notice that you can register clients from any instance, not just the one you are going to use to log in. The program has not been tested for multiple logins of the same user from different terminals, so its behavior in that scenario might be erratic. 
-Option 1 of a logged-in client throws an exception, that is most likely just a typo within the code. I'm not sure what information that option was supposed to give anyway.
+Option 1 of a logged-in client throws an exception, that is most likely just a typo within the code. I'm not sure what information that option was supposed to give anyway.  
+If you want to use the app on your private network you will need to swap my private IP in every instance of the code with yours (or change yours to mine).
